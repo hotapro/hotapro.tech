@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="vi" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hota Pro Tech — Công nghệ, kiến trúc và phương pháp triển khai</title>
+<meta name="description" content="Hota Pro Agency chia sẻ cách tiếp cận website, SEO kỹ thuật, phần mềm tùy chỉnh, SaaS/ERP và tự động hóa doanh nghiệp: nguyên tắc, quy trình và kiến thức kỹ thuật minh họa.">
+<link rel="canonical" href="https://www.hotapro.tech/">
+<meta name="theme-color" content="#6d3df2">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Hota Pro Tech">
+<meta property="og:title" content="Hota Pro Tech — Technology built around real business problems">
+<meta property="og:description" content="Trung tâm công nghệ, kiến trúc và phương pháp triển khai của Hota Pro Agency.">
+<meta property="og:url" content="https://www.hotapro.tech/">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%236d3df2'/%3E%3Cpath d='M18 18v28M46 18v28M18 32h28' stroke='%23fff' stroke-width='7' stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+{"@type":"Organization","@id":"https://www.hotapro.tech/#org","name":"Hota Pro Agency","legalName":"CÔNG TY TNHH HOTA PRO","alternateName":"Hota Pro Company Limited","url":"https://www.hotapro.tech/","slogan":"Xây dựng thương hiệu số","email":"lien-he@hotapro.com","telephone":"+84559559756","address":{"@type":"PostalAddress","streetAddress":"19A Trịnh Văn Bô, Hòe Thị, Xuân Phương","addressLocality":"Hà Nội","postalCode":"12008","addressCountry":"VN"},"sameAs":["https://www.facebook.com/hotapro","https://www.instagram.com/hotapro","https://www.threads.com/@hotapro","https://www.tiktok.com/@hotapro","https://www.youtube.com/@hotapro","https://github.com/hotapro","https://www.pinterest.com/hotapro","https://www.linkedin.com/company/hotapro"]},
+{"@type":"WebSite","@id":"https://www.hotapro.tech/#website","url":"https://www.hotapro.tech/","name":"Hota Pro Tech","inLanguage":"vi","publisher":{"@id":"https://www.hotapro.tech/#org"}},
+{"@type":"WebPage","url":"https://www.hotapro.tech/","name":"Hota Pro Tech — Công nghệ, kiến trúc và phương pháp triển khai","isPartOf":{"@id":"https://www.hotapro.tech/#website"},"about":{"@id":"https://www.hotapro.tech/#org"}}
+]}
+</script>
+<style>
+:root{--bg:#fff;--bg2:#f5f2ff;--ink:#1d1b26;--mut:#5d5a6e;--line:#e1d9f6;--pri:#6d3df2;--pri2:#4d22c4;--card:#fff;--glow:rgba(109,61,242,.16);--code:#1b1a24;--codeink:#e9e5fb;--r:16px}
+[data-theme=dark]{--bg:#121118;--bg2:#1a1824;--ink:#ece9f7;--mut:#a7a4bd;--line:#2f2b45;--pri:#9b7bff;--pri2:#c1adff;--card:#191722;--glow:rgba(155,123,255,.18);--code:#0d0c12}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:84px}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.65 "Bricolage Grotesque",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;transition:background .35s,color .35s}
+a{color:var(--pri2);text-underline-offset:3px}a:hover{color:var(--pri)}
+:focus-visible{outline:3px solid var(--pri);outline-offset:3px;border-radius:6px}
+.wrap{max-width:1160px;margin:0 auto;padding:0 22px}
+h1,h2,h3{line-height:1.12;letter-spacing:-.02em;margin:0 0 .5em}
+h1{font-size:clamp(2.5rem,6.4vw,4.9rem);font-weight:800}
+h2{font-size:clamp(1.8rem,3.6vw,2.7rem);font-weight:800}
+h3{font-size:1.2rem;font-weight:600;letter-spacing:-.01em}
+p{margin:0 0 1em}.mut{color:var(--mut)}
+code,pre,.mono{font-family:"JetBrains Mono",ui-monospace,Consolas,monospace}
+header.top{position:sticky;top:0;z-index:50;backdrop-filter:blur(14px);background:color-mix(in srgb,var(--bg) 82%,transparent);border-bottom:1px solid var(--line)}
+.bar{display:flex;align-items:center;gap:18px;height:66px}
+.logo{display:flex;align-items:center;gap:10px;font-weight:800;text-decoration:none;color:var(--ink);font-size:1.1rem}
+.logo i{width:32px;height:32px;border-radius:9px;background:linear-gradient(135deg,var(--pri),var(--pri2));display:grid;place-items:center;color:#fff;font-style:normal;font-size:.95rem}
+nav.main{margin-left:auto;display:flex;gap:4px;align-items:center}
+nav.main a{padding:7px 11px;border-radius:9px;text-decoration:none;color:var(--mut);font-size:.93rem;font-weight:600;transition:.2s}
+nav.main a:hover,nav.main a.on{background:var(--bg2);color:var(--pri2)}
+.btn{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--pri);background:var(--pri);color:#fff;padding:12px 22px;border-radius:12px;font:600 1rem inherit;font-family:inherit;text-decoration:none;cursor:pointer;transition:transform .2s,box-shadow .25s,background .2s;box-shadow:0 8px 24px -10px var(--pri)}
+.btn:hover{transform:translateY(-2px);box-shadow:0 14px 30px -10px var(--pri);color:#fff;background:var(--pri2)}
+.btn.ghost{background:transparent;color:var(--pri2);box-shadow:none}.btn.ghost:hover{background:var(--bg2);color:var(--pri2)}
+.ico{width:40px;height:40px;border-radius:11px;border:1px solid var(--line);background:var(--card);color:var(--ink);cursor:pointer;display:grid;place-items:center;font-size:1.05rem}
+.ico:hover{border-color:var(--pri)}#menu{display:none}
+.hero{position:relative;overflow:hidden;padding:84px 0 70px;background:radial-gradient(900px 420px at 85% -10%,var(--glow),transparent 70%),radial-gradient(700px 360px at 0 20%,var(--glow),transparent 70%)}
+.hero:before{content:"";position:absolute;inset:0;background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:56px 56px;opacity:.45;mask-image:linear-gradient(#000,transparent 85%);-webkit-mask-image:linear-gradient(#000,transparent 85%)}
+.hero .wrap{position:relative;display:grid;grid-template-columns:1.15fr .85fr;gap:44px;align-items:center}
+.hero h1 span{background:linear-gradient(100deg,var(--pri),var(--pri2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.lead{font-size:1.2rem;color:var(--mut);max-width:34em}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.note{font-size:.88rem;color:var(--mut);border-left:3px solid var(--pri);padding:2px 0 2px 12px;margin-top:22px;max-width:36em}
+section{padding:78px 0}section.alt{background:var(--bg2)}
+.sh{max-width:46em;margin-bottom:34px}
+.grid{display:grid;gap:18px}.g2{grid-template-columns:repeat(2,1fr)}.g3{grid-template-columns:repeat(3,1fr)}.g4{grid-template-columns:repeat(4,1fr)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:24px;transition:transform .3s,box-shadow .3s,border-color .3s}
+.card:hover{transform:translateY(-4px);border-color:var(--pri);box-shadow:0 18px 40px -22px var(--pri)}
+.card ul{margin:0;padding-left:1.1em;color:var(--mut)}.card li{margin:.25em 0}
+.tag{display:inline-block;font:500 .74rem "JetBrains Mono",monospace;padding:3px 9px;border-radius:99px;background:var(--bg2);color:var(--pri2);border:1px solid var(--line);margin:0 6px 6px 0}
+.tag.warn{background:transparent;border-style:dashed}
+.fig{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:18px;margin-top:26px}
+.fig svg{display:block;width:100%;height:auto}.fig figcaption{font-size:.86rem;color:var(--mut);margin-top:8px}
+.fb{fill:var(--bg2);stroke:var(--pri);stroke-width:1.5}.ft{fill:var(--ink);font:700 13px "Bricolage Grotesque",sans-serif}.fs{fill:var(--mut);font:400 11px "Bricolage Grotesque",sans-serif}.fa{stroke:var(--pri);stroke-width:2;fill:none}.fh{fill:var(--pri)}
+.nl{stroke:var(--line);stroke-width:1.4}.nn{fill:var(--card);stroke:var(--pri);stroke-width:1.4}.nc{fill:var(--pri)}
+a.node:hover .nn{fill:var(--bg2)}
+.steps{counter-reset:s;display:grid;grid-template-columns:repeat(5,1fr);gap:14px;padding:0;list-style:none;margin:0}
+.steps li{counter-increment:s;background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:20px;position:relative}
+.steps li:before{content:counter(s);font:500 .85rem "JetBrains Mono",monospace;color:#fff;background:var(--pri);width:28px;height:28px;border-radius:50%;display:grid;place-items:center;margin-bottom:12px}
+.steps p{font-size:.93rem;color:var(--mut);margin:0}
+.tools{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-bottom:22px}
+.tools input{flex:1;min-width:220px;padding:12px 16px;border-radius:12px;border:1px solid var(--line);background:var(--card);color:var(--ink);font:inherit}
+.chip{border:1px solid var(--line);background:var(--card);color:var(--mut);padding:8px 14px;border-radius:99px;font:600 .88rem inherit;font-family:inherit;cursor:pointer;transition:.2s}
+.chip[aria-pressed=true]{background:var(--pri);color:#fff;border-color:var(--pri)}
+.art{display:flex;flex-direction:column}
+.cb{position:relative;margin-top:auto}
+pre{margin:10px 0 0;background:var(--code);color:var(--codeink);border-radius:12px;padding:16px;overflow:auto;font-size:.8rem;line-height:1.6;max-height:300px;border:1px solid #33304a}
+.cp{position:absolute;top:18px;right:8px;background:#2c2842;color:#e9e5fb;border:1px solid #433e63;border-radius:8px;padding:4px 10px;font:500 .74rem "JetBrains Mono",monospace;cursor:pointer}
+.cp:hover{background:var(--pri)}
+.empty{display:none;padding:26px;border:1px dashed var(--line);border-radius:var(--r);color:var(--mut);text-align:center}
+details{background:var(--card);border:1px solid var(--line);border-radius:14px;margin-bottom:10px;transition:border-color .2s}
+details[open]{border-color:var(--pri)}
+summary{cursor:pointer;padding:16px 20px;font-weight:600;list-style:none;display:flex;justify-content:space-between;gap:12px}
+summary::-webkit-details-marker{display:none}summary:after{content:"+";font:500 1.3rem "JetBrains Mono",monospace;color:var(--pri);transition:transform .25s}
+details[open] summary:after{transform:rotate(45deg)}details p{padding:0 20px;margin:0 0 18px;color:var(--mut)}
+form{display:grid;gap:12px}label{font-weight:600;font-size:.92rem}
+input,select,textarea{width:100%;padding:12px 14px;border-radius:12px;border:1px solid var(--line);background:var(--bg);color:var(--ink);font:inherit}
+.eco{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:12px;margin-top:22px}
+.eco a{display:block;text-decoration:none;color:var(--ink);padding:14px 16px;border:1px solid var(--line);border-radius:14px;background:var(--card);transition:.25s;font-weight:600}
+.eco a:hover{border-color:var(--pri);transform:translateY(-3px)}.eco a.cur{background:var(--pri);color:#fff;border-color:var(--pri)}
+.eco small{display:block;font-weight:400;opacity:.8;font-size:.8rem}
+.soc{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}.soc a{padding:9px 16px;border:1px solid var(--line);border-radius:99px;text-decoration:none;font-weight:600;font-size:.92rem;background:var(--card)}.soc a:hover{border-color:var(--pri)}
+footer{border-top:1px solid var(--line);padding:44px 0;background:var(--bg2);font-size:.92rem;color:var(--mut)}
+footer .grid{grid-template-columns:1.4fr 1fr 1fr}footer strong{color:var(--ink)}
+#toast{position:fixed;left:50%;bottom:26px;transform:translate(-50%,24px);background:var(--ink);color:var(--bg);padding:11px 20px;border-radius:12px;font-weight:600;opacity:0;pointer-events:none;transition:.3s;z-index:99}
+#toast.show{opacity:1;transform:translate(-50%,0)}
+.js .rv{opacity:0;transform:translateY(18px);transition:opacity .7s,transform .7s}.js .rv.in{opacity:1;transform:none}
+@media(max-width:960px){.g4,.steps{grid-template-columns:repeat(2,1fr)}.g3{grid-template-columns:repeat(2,1fr)}.hero .wrap{grid-template-columns:1fr}footer .grid{grid-template-columns:1fr}}
+@media(max-width:820px){#menu{display:grid}nav.main{display:none;position:absolute;top:66px;left:0;right:0;flex-direction:column;align-items:stretch;background:var(--bg);padding:12px 22px 18px;border-bottom:1px solid var(--line)}nav.main.open{display:flex}.bar{gap:10px}.bar #theme{margin-left:auto}}
+@media(max-width:620px){.g2,.g3,.g4,.steps{grid-template-columns:1fr}section{padding:56px 0}.hero{padding-top:52px}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}.js .rv{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap bar">
+<a class="logo" href="#top" aria-label="Hota Pro Tech"><i>H</i>Hota Pro<span class="mut">.tech</span></a>
+<nav class="main" id="nav" aria-label="Điều hướng chính">
+<a href="#principles">Nguyên tắc</a><a href="#website">Website</a><a href="#seo">SEO kỹ thuật</a><a href="#software">Phần mềm</a><a href="#saas">SaaS/ERP</a><a href="#process">Quy trình</a><a href="#knowledge">Kiến thức</a><a href="#faq">FAQ</a><a href="#ecosystem">Hệ sinh thái</a>
+</nav>
+<button class="ico" id="theme" aria-label="Đổi giao diện sáng/tối" title="Đổi giao diện">◐</button>
+<button class="ico" id="menu" aria-label="Mở menu" aria-expanded="false">☰</button>
+</div></header>
+
+<main id="top">
+<section class="hero"><div class="wrap">
+<div>
+<p class="mono mut" style="font-size:.88rem">Hota Pro Agency · Xây dựng thương hiệu số</p>
+<h1>Technology built around <span>real business problems.</span></h1>
+<p class="lead">Chúng tôi chia sẻ cách tiếp cận bài toán công nghệ và marketing số: từ thiết kế website, SEO kỹ thuật, phần mềm tùy chỉnh, SaaS, ERP đến tự động hóa doanh nghiệp. Một đội, năm chuyên môn, một mục tiêu.</p>
+<div class="cta"><a class="btn" href="#contact">Yêu cầu tư vấn kỹ thuật</a><a class="btn ghost" href="#knowledge">Xem kiến thức kỹ thuật</a></div>
+<p class="note">Trang này mô tả phương pháp và định hướng. Chúng tôi không tuyên bố chứng nhận, nhà cung cấp cloud hay kiến trúc production cụ thể nào nếu chưa được xác nhận.</p>
+</div>
+<div class="cb" style="margin:0">
+<button class="cp" data-copy="hero" aria-label="Sao chép mã minh họa">Copy</button>
+<pre id="hero" aria-label="Mã giả minh họa quy trình"><code>// PSEUDOCODE — minh họa cách tiếp cận, không chạy được
+problem   = listen(business)
+goal      = define(problem, measurable = true)
+design    = architecture(goal, constraints)
+release   = build(design) |> test() |> ship()
+learn     = measure(release, goal)
+if (!goal.met) improve(design)</code></pre>
+</div>
+</div></section>
+
+<section id="principles"><div class="wrap">
+<div class="sh rv"><h2>Nguyên tắc kỹ thuật</h2><p class="mut">Năm nguyên tắc định hướng cách chúng tôi làm việc. Đây là nguyên tắc nội bộ, không phải chứng nhận hay tiêu chuẩn đã được cấp.</p></div>
+<div class="grid g3">
+<article class="card rv"><h3>Clarity</h3><p class="mut">Mục tiêu, phạm vi và cách đo kết quả được viết rõ trước khi xây dựng.</p></article>
+<article class="card rv"><h3>Maintainability</h3><p class="mut">Mã nguồn dễ đọc, cấu trúc nhất quán để người khác có thể tiếp tục.</p></article>
+<article class="card rv"><h3>Performance</h3><p class="mut">Tải nhanh, ít tài nguyên thừa, đo bằng số liệu thay vì cảm giác.</p></article>
+<article class="card rv"><h3>Security-by-design</h3><p class="mut">Cân nhắc dữ liệu, quyền truy cập và rủi ro ngay từ khâu thiết kế.</p></article>
+<article class="card rv"><h3>Measurable outcomes</h3><p class="mut">Mỗi hạng mục gắn với chỉ số có thể kiểm tra: tốc độ, hiển thị, chuyển đổi.</p></article>
+</div></div></section>
+
+<section id="website" class="alt"><div class="wrap">
+<div class="sh rv"><h2>Website engineering</h2><p class="mut">Website là nền tảng của mọi hoạt động số, nên cần được thiết kế như một hệ thống chứ không chỉ là giao diện.</p></div>
+<div class="grid g4">
+<article class="card rv"><h3>Kiến trúc nội dung</h3><ul><li>Cấu trúc trang theo nhu cầu người dùng</li><li>Heading và điều hướng rõ ràng</li><li>URL ngắn, ổn định</li></ul></article>
+<article class="card rv"><h3>Responsive UX</h3><ul><li>Thiết kế từ màn hình nhỏ</li><li>Vùng chạm đủ lớn</li><li>Luồng chuyển đổi gọn</li></ul></article>
+<article class="card rv"><h3>Performance</h3><ul><li>Tối ưu ảnh, font, script</li><li>Giảm layout shift</li><li>Đo bằng công cụ thực tế</li></ul></article>
+<article class="card rv"><h3>Accessibility</h3><ul><li>HTML ngữ nghĩa</li><li>Tương phản và focus rõ</li><li>Dùng được bằng bàn phím</li></ul></article>
+</div></div></section>
+
+<section id="seo"><div class="wrap">
+<div class="sh rv"><h2>Technical SEO</h2><p class="mut">SEO kỹ thuật giúp công cụ tìm kiếm hiểu và lập chỉ mục nội dung. Chúng tôi không cam kết thứ hạng cụ thể trên Google.</p></div>
+<div class="grid g3">
+<article class="card rv"><h3>Crawlability</h3><p class="mut">robots.txt, sitemap, cấu trúc liên kết để bot truy cập được trang quan trọng.</p></article>
+<article class="card rv"><h3>Indexability</h3><p class="mut">Kiểm soát trang nào nên hoặc không nên lập chỉ mục, tránh nội dung trùng lặp.</p></article>
+<article class="card rv"><h3>Canonical &amp; metadata</h3><p class="mut">Thẻ canonical, title, description và Open Graph nhất quán cho từng trang.</p></article>
+<article class="card rv"><h3>Structured data</h3><p class="mut">JSON-LD trung thực, phản ánh đúng nội dung có trên trang.</p></article>
+<article class="card rv"><h3>Internal linking</h3><p class="mut">Liên kết nội bộ có chủ đích giúp người dùng và bot đi từ chủ đề này sang chủ đề khác.</p></article>
+<article class="card rv"><h3>Core Web Vitals</h3><p class="mut">Theo dõi LCP, INP và CLS bằng dữ liệu đo thực tế để ưu tiên cải thiện.</p></article>
+</div>
+<figure class="fig rv"><div id="d1" role="img" aria-label="Sơ đồ: Website, Content, Search visibility, Qualified traffic, Conversion"></div><figcaption>Sơ đồ 1 — Mô hình khái niệm về chuỗi tăng trưởng từ website. Không phải bằng chứng về hệ thống production hiện có.</figcaption></figure>
+</div></section>
+
+<section id="software" class="alt"><div class="wrap">
+<div class="sh rv"><h2>Software development</h2><p class="mut">Phần mềm được xây quanh quy trình thật của doanh nghiệp, ưu tiên làm đúng vấn đề trước khi thêm tính năng.</p></div>
+<div class="grid g4">
+<article class="card rv"><h3>Web apps</h3><p class="mut">Ứng dụng web phục vụ khách hàng hoặc đội nội bộ.</p></article>
+<article class="card rv"><h3>Custom systems</h3><p class="mut">Hệ thống tùy chỉnh khi phần mềm có sẵn không khớp quy trình.</p></article>
+<article class="card rv"><h3>Integrations</h3><p class="mut">Kết nối hệ thống qua API và webhook để dữ liệu không bị rời rạc.</p></article>
+<article class="card rv"><h3>Business automation</h3><p class="mut">Tự động hóa tác vụ lặp lại: nhắc việc, đồng bộ dữ liệu, báo cáo.</p></article>
+</div>
+<figure class="fig rv"><div id="d3" role="img" aria-label="Sơ đồ: Business needs, Software modules, Integrations, Reporting"></div><figcaption>Sơ đồ 3 — Mô hình khái niệm từ nhu cầu kinh doanh đến báo cáo. Không phải kiến trúc hệ thống đang vận hành.</figcaption></figure>
+</div></section>
+
+<section id="saas"><div class="wrap">
+<div class="sh rv"><h2>SaaS &amp; ERP</h2><p class="mut">Năng lực định hướng và các sản phẩm đang phát triển. Mỗi mục được gắn nhãn đúng trạng thái; chưa có mục nào được công bố là đã phát hành.</p></div>
+<div class="grid g3">
+<article class="card rv"><span class="tag warn">Năng lực định hướng</span><h3>SaaS tùy chỉnh</h3><p class="mut">Thiết kế sản phẩm phần mềm theo mô hình thuê bao: tài khoản, phân quyền, thanh toán định kỳ.</p></article>
+<article class="card rv"><span class="tag warn">Năng lực định hướng</span><h3>ERP theo module</h3><p class="mut">Chia thành các module nhỏ (bán hàng, kho, công việc) để triển khai từng bước thay vì một hệ thống lớn.</p></article>
+<article class="card rv"><span class="tag warn">Đang phát triển · Chưa phát hành</span><h3>Sản phẩm nội bộ</h3><p class="mut">Các sản phẩm đang trong giai đoạn phát triển. Chi tiết và thời điểm phát hành sẽ được công bố khi sẵn sàng.</p></article>
+</div></div></section>
+
+<section id="growth" class="alt"><div class="wrap">
+<div class="sh rv"><h2>Digital growth stack</h2><p class="mut">Năm chuyên môn kết hợp trong một đội để các mắt xích không bị tách rời.</p></div>
+<div class="grid g4" style="grid-template-columns:repeat(5,1fr)">
+<article class="card rv"><h3>Website</h3><p class="mut">Nền tảng và trải nghiệm.</p></article>
+<article class="card rv"><h3>Content</h3><p class="mut">Nội dung trả lời nhu cầu thật.</p></article>
+<article class="card rv"><h3>SEO</h3><p class="mut">Khả năng được tìm thấy.</p></article>
+<article class="card rv"><h3>Ads</h3><p class="mut">Quảng cáo có mục tiêu rõ.</p></article>
+<article class="card rv"><h3>Analytics</h3><p class="mut">Đo lường để quyết định.</p></article>
+</div></div></section>
+
+<section id="process"><div class="wrap">
+<div class="sh rv"><h2>Quy trình năm bước</h2><p class="mut">Mỗi dự án đi qua cùng một chuỗi, điều chỉnh theo quy mô.</p></div>
+<ol class="steps">
+<li class="rv"><h3>Khám phá</h3><p>Làm rõ vấn đề, đối tượng và chỉ số thành công.</p></li>
+<li class="rv"><h3>Kiến trúc</h3><p>Thiết kế cấu trúc nội dung, hệ thống và kế hoạch.</p></li>
+<li class="rv"><h3>Xây dựng</h3><p>Triển khai theo từng phần nhỏ, có thể xem lại.</p></li>
+<li class="rv"><h3>Kiểm thử &amp; phát hành</h3><p>Kiểm tra chức năng, tốc độ, SEO kỹ thuật rồi phát hành.</p></li>
+<li class="rv"><h3>Cải tiến</h3><p>Đo kết quả thật và cải thiện theo dữ liệu.</p></li>
+</ol>
+<figure class="fig rv"><div id="d2" role="img" aria-label="Sơ đồ: Discovery, Architecture, Build, Test, Release, Improve"></div><figcaption>Sơ đồ 2 — Vòng lặp triển khai khái niệm. Không mô phỏng CI/CD hay trạng thái triển khai thực.</figcaption></figure>
+</div></section>
+
+<section id="knowledge" class="alt"><div class="wrap">
+<div class="sh rv"><h2>Technical knowledge center</h2><p class="mut">Bài viết ngắn kèm ví dụ minh họa. Mỗi ví dụ được ghi rõ là chạy được hay là pseudocode. Hãy kiểm thử trước khi dùng cho dự án thật.</p></div>
+<div class="tools">
+<input id="q" type="search" placeholder="Tìm bài viết, ví dụ: canonical, LCP, webhook" aria-label="Tìm bài viết kỹ thuật">
+<span id="chips" role="group" aria-label="Lọc theo chủ đề"></span>
+</div>
+<div class="grid g2" id="arts"></div>
+<p class="empty" id="empty">Không có bài viết khớp. Hãy thử từ khóa khác hoặc chọn “Tất cả”.</p>
+</div></section>
+
+<section id="faq"><div class="wrap" style="max-width:820px">
+<div class="sh rv"><h2>Câu hỏi thường gặp</h2></div>
+<details><summary>Hota Pro có cam kết đưa website lên top Google không?</summary><p>Không. Chúng tôi làm SEO kỹ thuật và nội dung đúng chuẩn, nhưng thứ hạng phụ thuộc nhiều yếu tố ngoài tầm kiểm soát nên không thể cam kết vị trí cụ thể.</p></details>
+<details><summary>Trang này có chứng minh Hota Pro đang vận hành hệ thống nào không?</summary><p>Không. Các sơ đồ và ví dụ là mô hình khái niệm để giải thích phương pháp, không phải bằng chứng về kiến trúc production, uptime hay quy trình bảo mật cụ thể.</p></details>
+<details><summary>SaaS và ERP của Hota Pro đã phát hành chưa?</summary><p>Mục SaaS/ERP trình bày năng lực định hướng và sản phẩm đang phát triển. Chưa có sản phẩm nào được công bố là đã phát hành trên trang này.</p></details>
+<details><summary>Tôi nên chuẩn bị gì trước khi yêu cầu tư vấn kỹ thuật?</summary><p>Mô tả ngắn về mục tiêu kinh doanh, hệ thống hiện có (nếu có), người dùng chính và mốc thời gian mong muốn. Chưa cần tài liệu đầy đủ.</p></details>
+<details><summary>Các tên miền hotapro.* có quan hệ gì với nhau?</summary><p>Đây là các tên miền thuộc hệ sinh thái Hota Pro. Bạn có thể xem sơ đồ liên kết ở phần Hệ sinh thái bên dưới.</p></details>
+</div></section>
+
+<section id="contact" class="alt"><div class="wrap"><div class="grid g2" style="align-items:start">
+<div class="rv"><h2>Yêu cầu tư vấn kỹ thuật</h2><p class="mut">Điền thông tin và bấm gửi. Trình email của bạn sẽ mở với nội dung đã soạn sẵn; trang này không lưu hay gửi dữ liệu lên máy chủ.</p>
+<p><strong>Email:</strong> <a href="mailto:lien-he@hotapro.com">lien-he@hotapro.com</a><br><strong>Điện thoại:</strong> <a href="tel:+84559559756">+84 559 559 756</a><br><strong>Địa chỉ:</strong> 19A Trịnh Văn Bô, Hòe Thị, Xuân Phương, Hà Nội 12008</p></div>
+<form id="cf" class="card rv">
+<div><label for="n">Họ tên</label><input id="n" required autocomplete="name"></div>
+<div><label for="t">Chủ đề cần tư vấn</label><select id="t"><option>Thiết kế website</option><option>SEO kỹ thuật</option><option>Phần mềm tùy chỉnh</option><option>SaaS / ERP</option><option>Tự động hóa doanh nghiệp</option><option>Khác</option></select></div>
+<div><label for="m">Mô tả ngắn vấn đề</label><textarea id="m" rows="4" required></textarea></div>
+<button class="btn" type="submit">Gửi yêu cầu qua email</button>
+</form></div></div></section>
+
+<section id="ecosystem"><div class="wrap">
+<div class="sh rv"><h2>Hệ sinh thái Hota Pro</h2><p class="mut">Mười một tên miền thuộc hệ sinh thái. <strong>hotapro.tech</strong> là website bạn đang xem.</p></div>
+<figure class="fig rv"><div id="net"></div><figcaption>Sơ đồ mạng lưới liên kết khái niệm giữa các tên miền. Bấm vào một nút để mở website.</figcaption></figure>
+<div class="eco" id="eco"></div>
+<div class="soc" id="soc"></div>
+</div></section>
+</main>
+
+<footer><div class="wrap grid">
+<div><strong>CÔNG TY TNHH HOTA PRO</strong><br>Hota Pro Company Limited · Hota Pro Agency<br>“Xây dựng thương hiệu số”<br>Đại diện: Ngô Anh Vũ</div>
+<div>Mã số đăng ký (theo thông tin được cung cấp): 0049200994<br>Ngày đăng ký: 01/10/2026<br>19A Trịnh Văn Bô, Hòe Thị, Xuân Phương, Hà Nội 12008</div>
+<div><a href="mailto:lien-he@hotapro.com">lien-he@hotapro.com</a><br><a href="tel:+84559559756">+84559559756</a><br>© 2026 Hota Pro. Mọi sơ đồ và ví dụ chỉ mang tính minh họa.</div>
+</div></footer>
+<div id="toast" role="status" aria-live="polite"></div>
+
+<script>
+(function(){
+var $=function(s){return document.querySelector(s)};
+document.documentElement.classList.add('js');
+
+/* Theme */
+var root=document.documentElement,KEY='hp-tech-theme',saved=null;
+try{saved=localStorage.getItem(KEY)}catch(e){}
+root.setAttribute('data-theme',saved||(matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light'));
+$('#theme').onclick=function(){var n=root.getAttribute('data-theme')==='dark'?'light':'dark';root.setAttribute('data-theme',n);try{localStorage.setItem(KEY,n)}catch(e){}toast(n==='dark'?'Đã bật giao diện tối':'Đã bật giao diện sáng')};
+
+/* Menu */
+var nav=$('#nav'),mb=$('#menu');
+mb.onclick=function(){var o=nav.classList.toggle('open');mb.setAttribute('aria-expanded',o)};
+nav.addEventListener('click',function(e){if(e.target.tagName==='A'){nav.classList.remove('open');mb.setAttribute('aria-expanded','false')}});
+
+/* Toast + copy */
+var tt;function toast(m){var t=$('#toast');t.textContent=m;t.classList.add('show');clearTimeout(tt);tt=setTimeout(function(){t.classList.remove('show')},1900)}
+function copy(text){
+ if(navigator.clipboard&&window.isSecureContext){return navigator.clipboard.writeText(text)}
+ return new Promise(function(res,rej){var a=document.createElement('textarea');a.value=text;a.style.position='fixed';a.style.opacity='0';document.body.appendChild(a);a.select();try{document.execCommand('copy')?res():rej()}catch(e){rej(e)}a.remove()});
+}
+document.addEventListener('click',function(e){
+ var b=e.target.closest('.cp');if(!b)return;
+ var code=b.parentNode.querySelector('code').textContent;
+ copy(code).then(function(){b.textContent='Đã chép';toast('Đã sao chép mã vào clipboard');setTimeout(function(){b.textContent='Copy'},1600)},function(){toast('Không thể sao chép, hãy chọn và chép thủ công')});
+});
+
+/* SVG flow diagrams */
+var NS='http://www.w3.org/2000/svg';
+function flow(el,steps){
+ var v=matchMedia('(max-width:900px)').matches,n=steps.length,bw=v?280:140,bh=v?58:64,gap=v?30:38,W,H,s='';
+ W=v?bw+20:n*bw+(n-1)*gap+20;H=v?n*(bh+gap)-gap+20:bh+20;
+ for(var i=0;i<n;i++){
+  var x=v?10:10+i*(bw+gap),y=v?10+i*(bh+gap):10;
+  s+='<rect class="fb" x="'+x+'" y="'+y+'" width="'+bw+'" height="'+bh+'" rx="12"/>';
+  s+='<text class="ft" x="'+(x+bw/2)+'" y="'+(y+bh/2-3)+'" text-anchor="middle">'+steps[i][0]+'</text>';
+  s+='<text class="fs" x="'+(x+bw/2)+'" y="'+(y+bh/2+15)+'" text-anchor="middle">'+steps[i][1]+'</text>';
+  if(i<n-1){
+   if(v){var ay=y+bh;s+='<path class="fa" d="M'+(x+bw/2)+' '+ay+'V'+(ay+gap-6)+'"/><path class="fh" d="M'+(x+bw/2-5)+' '+(ay+gap-8)+'h10l-5 7z"/>'}
+   else{var ax=x+bw,ay2=y+bh/2;s+='<path class="fa" d="M'+ax+' '+ay2+'H'+(ax+gap-7)+'"/><path class="fh" d="M'+(ax+gap-9)+' '+(ay2-5)+'v10l7-5z"/>'}
+  }
+ }
+ el.innerHTML='<svg viewBox="0 0 '+W+' '+H+'" xmlns="'+NS+'" aria-hidden="true">'+s+'</svg>';
+}
+var D=[['#d1',[['Website','Kiến trúc & UX'],['Content','Nội dung hữu ích'],['Search visibility','Khả năng hiển thị'],['Qualified traffic','Truy cập phù hợp'],['Conversion','Liên hệ hoặc mua']]],
+['#d2',[['Discovery','Hiểu vấn đề'],['Architecture','Thiết kế giải pháp'],['Build','Triển khai'],['Test','Kiểm thử'],['Release','Phát hành'],['Improve','Đo và cải tiến']]],
+['#d3',[['Business needs','Mục tiêu & quy trình'],['Software modules','Tách chức năng'],['Integrations','Kết nối hệ thống'],['Reporting','Số liệu quản trị']]]];
+var vert=matchMedia('(max-width:900px)').matches;
+function drawAll(){D.forEach(function(d){flow($(d[0]),d[1])})}
+drawAll();
+matchMedia('(max-width:900px)').addEventListener('change',drawAll);
+
+/* Ecosystem */
+var TLD=['com','net','us','org','online','me','store','tech','app','xyz','site'];
+var eco=$('#eco');
+TLD.forEach(function(t){var a=document.createElement('a');a.href='https://www.hotapro.'+t;a.rel='noopener';if(t==='tech'){a.className='cur';a.setAttribute('aria-current','page')}
+ a.innerHTML='hotapro.'+t+'<small>'+(t==='tech'?'Website hiện tại':'Tên miền hệ sinh thái')+'</small>';eco.appendChild(a)});
+(function(){
+ var others=TLD.filter(function(t){return t!=='tech'}),cx=280,cy=210,rx=210,ry=148,n=others.length,pts=[],s='';
+ others.forEach(function(t,i){var a=-Math.PI/2+i*2*Math.PI/n;pts.push([cx+rx*Math.cos(a),cy+ry*Math.sin(a),t])});
+ pts.forEach(function(p,i){var q=pts[(i+1)%n];s+='<line class="nl" x1="'+p[0].toFixed(1)+'" y1="'+p[1].toFixed(1)+'" x2="'+q[0].toFixed(1)+'" y2="'+q[1].toFixed(1)+'"/><line class="nl" x1="'+cx+'" y1="'+cy+'" x2="'+p[0].toFixed(1)+'" y2="'+p[1].toFixed(1)+'"/>'});
+ pts.forEach(function(p){s+='<a class="node" href="https://www.hotapro.'+p[2]+'" target="_blank" rel="noopener"><title>hotapro.'+p[2]+'</title><rect class="nn" x="'+(p[0]-46).toFixed(1)+'" y="'+(p[1]-15).toFixed(1)+'" width="92" height="30" rx="15"/><text class="fs" style="font-size:11.5px;fill:var(--ink)" x="'+p[0].toFixed(1)+'" y="'+(p[1]+4).toFixed(1)+'" text-anchor="middle">hotapro.'+p[2]+'</text></a>'});
+ s+='<rect class="nc" x="'+(cx-72)+'" y="'+(cy-26)+'" width="144" height="52" rx="14"/><text x="'+cx+'" y="'+(cy-3)+'" text-anchor="middle" style="fill:#fff;font:700 14px Bricolage Grotesque,sans-serif">hotapro.tech</text><text x="'+cx+'" y="'+(cy+14)+'" text-anchor="middle" style="fill:#fff;font:400 11px Bricolage Grotesque,sans-serif">Website hiện tại</text>';
+ $('#net').innerHTML='<svg viewBox="0 0 560 420" xmlns="'+NS+'" role="img" aria-label="Sơ đồ mạng lưới 11 tên miền hotapro, trong đó hotapro.tech là website hiện tại">'+s+'</svg>';
+})();
+
+/* Social */
+[['Facebook','https://www.facebook.com/hotapro'],['Instagram','https://www.instagram.com/hotapro'],['Threads','https://www.threads.com/@hotapro'],['TikTok','https://www.tiktok.com/@hotapro'],['YouTube','https://www.youtube.com/@hotapro'],['GitHub','https://github.com/hotapro'],['Pinterest','https://www.pinterest.com/hotapro'],['LinkedIn','https://www.linkedin.com/company/hotapro']].forEach(function(x){
+ var a=document.createElement('a');a.href=x[1];a.rel='noopener me';a.target='_blank';a.textContent=x[0];$('#soc').appendChild(a)});
+
+/* Knowledge center */
+var ARTS=[
+{t:'Canonical và metadata cơ bản',g:'SEO',k:'Chạy được (HTML)',d:'Mỗi trang nên có một URL canonical duy nhất, title và description riêng.',c:'<link rel="canonical" href="https://www.hotapro.tech/">\n<title>Tên trang — Hota Pro Tech</title>\n<meta name="description" content="Mô tả 120–160 ký tự, đúng nội dung trang.">\n<meta property="og:title" content="Tên trang">\n<meta property="og:url" content="https://www.hotapro.tech/">'},
+{t:'JSON-LD Organization trung thực',g:'SEO',k:'Chạy được (JSON-LD)',d:'Chỉ khai báo thông tin thật, có thể kiểm chứng trên trang.',c:'<script type="application/ld+json">\n{\n  "@context": "https://schema.org",\n  "@type": "Organization",\n  "name": "Tên tổ chức",\n  "url": "https://example.com/",\n  "email": "contact@example.com"\n}\n<\/script>'},
+{t:'Đo LCP bằng PerformanceObserver',g:'Hiệu năng',k:'Chạy được (JavaScript)',d:'Dán vào console trình duyệt để xem phần tử LCP của trang đang mở.',c:'new PerformanceObserver((list) => {\n  const e = list.getEntries().pop();\n  console.log("LCP (ms):", Math.round(e.startTime), e.element);\n}).observe({ type: "largest-contentful-paint", buffered: true });'},
+{t:'Giảm layout shift với ảnh',g:'Hiệu năng',k:'Chạy được (HTML)',d:'Khai báo kích thước ảnh để trình duyệt giữ chỗ trước khi tải xong.',c:'<img src="anh.webp" alt="Mô tả ảnh"\n     width="800" height="450"\n     loading="lazy" decoding="async"\n     style="max-width:100%;height:auto">'},
+{t:'Debounce ô tìm kiếm',g:'Web',k:'Chạy được (JavaScript)',d:'Trì hoãn xử lý để không lọc lại sau mỗi phím gõ.',c:'function debounce(fn, wait = 200) {\n  let id;\n  return (...args) => {\n    clearTimeout(id);\n    id = setTimeout(() => fn(...args), wait);\n  };\n}\n\nconst onType = debounce((v) => console.log("Tìm:", v), 250);\nonType("can"); onType("canon"); onType("canonical");'},
+{t:'Tạo sitemap.xml bằng Node.js',g:'Tự động hóa',k:'Chạy được (Node.js)',d:'Sinh sitemap từ danh sách URL, lưu thành file và gửi qua Search Console.',c:'const urls = ["/", "/blog/", "/lien-he/"];\nconst base = "https://www.hotapro.tech";\nconst xml = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls.map(u => `  <url><loc>${base}${u}</loc></url>`).join("\\n")}\n</urlset>`;\nrequire("fs").writeFileSync("sitemap.xml", xml);\nconsole.log("Đã tạo sitemap.xml");'},
+{t:'Xử lý webhook an toàn khi bị gửi lặp',g:'Tự động hóa',k:'Pseudocode — không chạy trực tiếp',d:'Dùng khóa idempotency để một sự kiện chỉ được xử lý một lần.',c:'// PSEUDOCODE\nonWebhook(event):\n  verifySignature(event)          // từ chối nếu sai chữ ký\n  if store.has(event.id):         // đã xử lý rồi\n    return 200\n  process(event)\n  store.save(event.id)\n  return 200'}
+];
+var cur='Tất cả',tags=['Tất cả'].concat(ARTS.map(function(a){return a.g}).filter(function(v,i,s){return s.indexOf(v)===i}));
+var chips=$('#chips'),box=$('#arts');
+tags.forEach(function(t){var b=document.createElement('button');b.type='button';b.className='chip';b.textContent=t;b.setAttribute('aria-pressed',t===cur);b.onclick=function(){cur=t;[].forEach.call(chips.children,function(c){c.setAttribute('aria-pressed',c===b)});render()};chips.appendChild(b)});
+function render(){
+ var q=$('#q').value.trim().toLowerCase(),n=0;box.innerHTML='';
+ ARTS.forEach(function(a){
+  if(cur!=='Tất cả'&&a.g!==cur)return;
+  if(q&&(a.t+' '+a.d+' '+a.g+' '+a.c).toLowerCase().indexOf(q)<0)return;
+  n++;var el=document.createElement('article');el.className='card art';
+  var h=document.createElement('h3');h.textContent=a.t;
+  var tg=document.createElement('div');tg.innerHTML='<span class="tag">'+a.g+'</span><span class="tag'+(a.k.indexOf('Pseudo')===0?' warn':'')+'">'+a.k+'</span>';
+  var p=document.createElement('p');p.className='mut';p.textContent=a.d;
+  var w=document.createElement('div');w.className='cb';
+  var b=document.createElement('button');b.type='button';b.className='cp';b.textContent='Copy';b.setAttribute('aria-label','Sao chép mã: '+a.t);
+  var pre=document.createElement('pre'),code=document.createElement('code');code.textContent=a.c;pre.appendChild(code);w.appendChild(b);w.appendChild(pre);
+  el.appendChild(tg);el.appendChild(h);el.appendChild(p);el.appendChild(w);box.appendChild(el);
+ });
+ $('#empty').style.display=n?'none':'block';
+}
+var to;$('#q').addEventListener('input',function(){clearTimeout(to);to=setTimeout(render,150)});
+render();
+
+/* Contact form -> mailto */
+$('#cf').addEventListener('submit',function(e){
+ e.preventDefault();
+ var body='Họ tên: '+$('#n').value+'\nChủ đề: '+$('#t').value+'\n\n'+$('#m').value;
+ location.href='mailto:lien-he@hotapro.com?subject='+encodeURIComponent('Yêu cầu tư vấn kỹ thuật — '+$('#t').value)+'&body='+encodeURIComponent(body);
+ toast('Đang mở trình email của bạn');
+});
+
+/* Reveal on scroll + active nav */
+var rv=document.querySelectorAll('.rv');
+if('IntersectionObserver' in window){
+ var io=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}})},{threshold:.12});
+ rv.forEach(function(el){io.observe(el)});
+}else{rv.forEach(function(el){el.classList.add('in')})}
+if('IntersectionObserver' in window){
+ var links={};[].forEach.call(nav.querySelectorAll('a'),function(a){links[a.getAttribute('href').slice(1)]=a});
+ var so=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting){for(var k in links)links[k].classList.remove('on');if(links[x.target.id])links[x.target.id].classList.add('on')}})},{rootMargin:'-45% 0px -50% 0px'});
+ document.querySelectorAll('main section[id]').forEach(function(s){so.observe(s)});
+}
+})();
+</script>
+</body>
+</html>
